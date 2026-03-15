@@ -1,18 +1,8 @@
-// ====== DANH SÁCH ẢNH NỀN CHO 10 CÂU HỎI ======
+// ====== DANH SÁCH ẢNH NỀN CHO 10 CÂU HỎI (Giữ nguyên thứ tự của bro) ======
 const backgroundImages = [
-  "background.jpg",  // 0: Trang Bắt Đầu
-  "front.jpg",       // 1: Câu hỏi 1
-  "10th.jpg",        // 2: Câu hỏi 2
-  "des.jpg",         // 3: Câu hỏi 3
-  "quansu.jpg",      // 4: Câu hỏi 4
-  "2gether1.jpg",    // 5: Câu hỏi 5
-  "ky.jpg",          // 6: Câu hỏi 6
-  "12.jpg",    // 7: Câu hỏi 7  <-- THAY TÊN ẢNH VÀO ĐÂY
-  "random.jpg",    // 8: Câu hỏi 8  <-- THAY TÊN ẢNH VÀO ĐÂY
-  "backstage.jpg",    // 9: Câu hỏi 9  <-- THAY TÊN ẢNH VÀO ĐÂY
-  "2gether1.jpg",   // 10: Câu hỏi 10 <-- THAY TÊN ẢNH VÀO ĐÂY
-  "2gether2.jpg", // 11: Trang Kết Quả <-- THAY TÊN ẢNH VÀO ĐÂY
-  "rain.jpg"     // 12: Trang Cuối (Lời Nhắn) <-- THAY TÊN ẢNH VÀO ĐÂY
+  "background.jpg", "front.jpg", "10th.jpg", "des.jpg", "quansu.jpg",
+  "2gether1.jpg", "ky.jpg", "12.jpg", "random.jpg", "backstage.jpg",
+  "2gether1.jpg", "2gether2.jpg", "rain.jpg"
 ];
 
 function changeBackground(index) {
@@ -24,7 +14,6 @@ function changeBackground(index) {
 changeBackground(0);
 
 // ===============================================
-
 
 const startPage = document.getElementById("start-page");
 const quizPage = document.getElementById("quiz-page");
@@ -108,7 +97,7 @@ const questions = [
       { text: "Được thả lỏng, được bình tĩnh lại, như vừa đi qua một khoảng trời rất dịu.", type: "lavender" },
       { text: "Được chăm sóc bởi những điều nhỏ xíu nhưng đáng nhớ vô cùng.", type: "vanilla" },
       { text: "Được truyền cảm hứng để mạnh dạn hơn, sống thật hơn.", type: "ocean" },
-      { text: "Được anủi bằng sự tử tế rất đỗi nhẹ nhàng.", type: "jasmine" }
+      { text: "Được an ủi bằng sự tử tế rất đỗi nhẹ nhàng.", type: "jasmine" }
     ]
   },
   {
@@ -153,7 +142,7 @@ const questions = [
   }
 ];
 
-// ====== KẾT QUẢ VÀ TÊN ẢNH NỀN TƯƠNG ỨNG ======
+// ====== KẾT QUẢ VÀ TÊN ẢNH NỀN TƯƠNG ỨNG (NỘI DUNG ĐÃ ĐƯỢC KÉO DÀI) ======
 const results = {
   rose: {
     name: "🌹 ROSE BLOOM",
@@ -172,15 +161,21 @@ const results = {
     keywords: ["Bình yên", "Sâu lắng", "Nhẹ nhàng", "Chữa lành"],
     theme: "theme-lavender",
     bgImage: "./lavender.jpg",
-    longText: `<p>Bạn giống như mùi lavender vương trên vạt áo — nhẹ nhàng, đủ khiến người ta thở chậm lại. Bạn hiểu cảm xúc và những khoảng lặng, là nơi an toàn để người khác được là chính mình.</p>`
+    longText: `
+      <p>Bạn giống như mùi lavender vương trên vạt áo vào một ngày lộng gió — nhẹ nhàng, yên tĩnh nhưng có khả năng xoa dịu mọi bão giông trong lòng người đối diện.</p>
+      <p>Sức mạnh của bạn không nằm ở sự phô trương mà ở sự tĩnh lặng. Bạn là nơi an toàn mà bạn bè tìm đến khi mệt mỏi, là người lắng nghe không phán xét. Sự hiện diện của bạn giống như một nốt trầm xao xuyến, khiến thanh xuân của chúng ta trở nên cân bằng và dịu dàng hơn bao giờ hết.</p>
+    `
   },
   vanilla: {
     name: "🍦 VANILLA GLOW",
     subtitle: "Bạn là mùi hương của sự ấm áp, ngọt ngào và những niềm vui nhỏ bé.",
     keywords: ["Ấm áp", "Ngọt ngào", "Thân thuộc", "Dễ mến"],
     theme: "theme-vanilla",
-    bgImage: "./vanilla.jpg", // Đảm bảo bạn có file ảnh này trong thư mục
-    longText: `<p>Bạn đem đến cảm giác thân thuộc, mà trong cuộc đời này, thân thuộc đôi khi còn quý hơn cả rực rỡ. Sự chân thành và ấm áp của bạn chính là món quà quý giá nhất dành cho những người xung quanh.</p>`
+    bgImage: "./vanilla.jpg",
+    longText: `
+      <p>Bạn mang trong mình sự ngọt ngào nồng nàn của Vanilla — một mùi hương của sự tử tế, của căn bếp sáng đèn và những cái ôm ấm áp giữa mùa đông lạnh giá.</p>
+      <p>Trong cuộc đời này, sự thân thuộc đôi khi còn quý hơn cả vẻ rực rỡ. Bạn khiến người khác thấy được là chính mình khi ở bên cạnh. Trái tim bạn giống như một ngọn lửa nhỏ, không bao giờ tắt, luôn âm thầm lan tỏa hy vọng và niềm vui đến cho mọi mảnh ghép trong tập thể 12D1 này.</p>
+    `
   },
   ocean: {
     name: "🌊 OCEAN MIST",
@@ -188,7 +183,10 @@ const results = {
     keywords: ["Tự do", "Trong trẻo", "Sâu sắc", "Truyền cảm hứng"],
     theme: "theme-ocean",
     bgImage: "./ocean.jpg",
-    longText: `<p>Bạn giống như mùi hương của biển sau cơn gió sớm. Ở bạn có một tinh thần tự do, dám sống thật với cảm xúc và luôn là nguồn cảm hứng để người khác dám mơ xa hơn.</p>`
+    longText: `
+      <p>Bạn giống như mùi hương của biển sau cơn gió sớm — trong vắt, tràn đầy sức sống và luôn mang theo khát khao hướng về những chân trời mới xa xôi.</p>
+      <p>Bạn sở hữu một tinh thần tự do, không chịu gò bó và luôn có cái nhìn sâu sắc về thế giới. Bạn truyền cảm hứng cho mọi người xung quanh sống can đảm hơn, dám mơ những giấc mơ lớn hơn. Dù cuộc sống có sóng gió, bạn vẫn luôn giữ được vẻ tĩnh lặng và bao dung như đại dương vô tận.</p>
+    `
   },
   jasmine: {
     name: "🌼 JASMINE WHISPER",
@@ -196,18 +194,22 @@ const results = {
     keywords: ["Tử tế", "Âm thầm", "Dịu lành", "Đáng quý"],
     theme: "theme-jasmine",
     bgImage: "./jasmine.jpg",
-    longText: `<p>Bạn giống như hương nhài trong đêm — không ồn ào nhưng nhớ thật lâu. Sự tử tế của bạn đến từ cách bạn sống và bảo vệ sự mềm mại của mình giữa thế giới vội vã.</p>`
+    longText: `
+      <p>Bạn giống như hương hoa nhài nở rộ trong đêm tĩnh mịch — khiêm nhường, thanh khiết nhưng dư vị lại lưu luyến mãi không chịu rời đi.</p>
+      <p>Bạn không chọn cách tỏa sáng rực rỡ dưới ánh đèn, mà chọn cách tử tế bằng những hành động âm thầm. Sự kiên định và lòng tốt thuần hậu của bạn là thứ keo gắn kết tuyệt vời nhất. Cảm ơn bạn vì đã bảo vệ sự mềm mại của mình giữa một thế giới vội vã, để chúng ta biết rằng sự chân thành vẫn luôn tồn tại.</p>
+    `
   }
 };
-function setRandomStartImg() {
-    const resultImages = ["rose.jpg", "lavender.jpg", "vanilla.jpg", "ocean.jpg", "jasmine.jpg"];
-    const randomIndex = Math.floor(Math.random() * resultImages.length);
-    const startImg = document.getElementById("start-perfume-img");
-    if (startImg) {
-        startImg.src = "./" + resultImages[randomIndex];
-    }
+
+// Hàm trộn mảng (Fisher-Yates Shuffle)
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]]; // Tráo đổi vị trí
+  }
+  return array;
 }
-setRandomStartImg(); // Chạy luôn khi load trang
+
 function resetScores() {
   for (let key in scores) { scores[key] = 0; }
 }
@@ -235,11 +237,16 @@ function showQuestion() {
   questionTitle.textContent = currentQuestion.question;
   answersContainer.innerHTML = "";
 
+  // Hiệu ứng Fade-in cho câu hỏi
   questionCard.classList.remove("fade-in");
   void questionCard.offsetWidth; 
   questionCard.classList.add("fade-in");
 
-  currentQuestion.answers.forEach((answer) => {
+  // --- LOGIC TRÁO ĐÁP ÁN ---
+  // Tạo một bản sao của mảng đáp án để không làm hỏng dữ liệu gốc
+  const shuffledAnswers = shuffle([...currentQuestion.answers]);
+
+  shuffledAnswers.forEach((answer) => {
     const button = document.createElement("button");
     button.className = "answer-btn";
     button.textContent = answer.text;
@@ -277,17 +284,13 @@ function showResult() {
   quizPage.classList.add("hidden");
   resultPage.classList.remove("hidden");
   
-  // 1. Đổi nền bự phía sau
+  // Lưu ảnh kết quả và đổi nền
   currentResultBg = result.bgImage;
   document.body.style.backgroundImage = `url('${currentResultBg}')`;
 
-  // 2. Nhét ảnh kết quả vào trong ô vuông lọ nước hoa
-  const perfumeImg = document.getElementById("result-perfume-img");
-  if (perfumeImg) {
-    perfumeImg.src = currentResultBg; // Gán đúng link ảnh đang dùng làm nền vào cái chai
-  } else {
-    console.log("LỖI: Không tìm thấy cái thẻ img nào có id là 'result-perfume-img' cả!");
-  }
+  // Nhét ảnh kết quả vào lọ ở trang kết quả
+  const resultImg = document.getElementById("result-perfume-img");
+  if (resultImg) resultImg.src = currentResultBg;
 
   resultName.textContent = result.name;
   resultSubtitle.textContent = result.subtitle;
@@ -311,10 +314,9 @@ function showFinalPage() {
   resultPage.classList.add("hidden");
   finalPage.classList.remove("hidden");
   
-  // Nền background to đằng sau vẫn là rain.jpg theo ý bro
-  changeBackground(12); 
+  changeBackground(12); // Hiện ảnh rain.jpg ở background
   
-  // Nhét ảnh KHỚP VỚI KẾT QUẢ vào lọ ở trang cuối
+  // Nhét ảnh kết quả vào lọ ở trang cuối cho khớp với feature
   const finalImg = document.getElementById("final-perfume-img");
   if (finalImg && currentResultBg !== "") {
     finalImg.src = currentResultBg; 
@@ -322,6 +324,19 @@ function showFinalPage() {
   
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
+
+// Hàm chọn ảnh ngẫu nhiên cho lọ trang đầu
+function setRandomStartImg() {
+    const resultImages = ["rose.jpg", "lavender.jpg", "vanilla.jpg", "ocean.jpg", "jasmine.jpg"];
+    const randomIndex = Math.floor(Math.random() * resultImages.length);
+    const startImg = document.getElementById("start-perfume-img");
+    if (startImg) {
+        startImg.src = "./" + resultImages[randomIndex];
+    }
+}
+
+// Gọi hàm này ngay lập tức để có ảnh random lúc mở web
+setRandomStartImg();
 
 // Gán sự kiện cho các nút
 startButton.addEventListener("click", startQuiz);
@@ -332,5 +347,6 @@ restartFromFinalButton.addEventListener("click", () => {
   startPage.classList.remove("hidden");
   
   changeBackground(0); // Về lại ảnh đầu
+  setRandomStartImg(); // Reset lại ảnh random trang đầu
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
