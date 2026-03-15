@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bạn là mùi hương nào?</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="floating-blur blur-1"></div>
+  <div class="floating-blur blur-2"></div>
+  <div class="floating-blur blur-3"></div>
+  <div class="floating-blur blur-4"></div>
+
+  <main class="app-shell">
+    <section class="quiz-container">
+
+      <div class="start-page" id="start-page">
+        <div class="badge">8/3 Special</div>
+        <h1>BẠN LÀ MÙI HƯƠNG NÀO?</h1>
+        <p class="subtitle">
+          Mỗi cô gái đều mang trong mình một mùi hương rất riêng —
+          có người dịu dàng như một buổi chiều yên, có người rực rỡ như nắng,
+          có người âm thầm nhưng để lại dư vị rất lâu trong lòng người khác.
+        </p>
+        <p class="subtitle small">
+          Hãy trả lời vài câu hỏi nhỏ để xem bạn tỏa hương theo cách nào nhé.
+        </p>
+        <div class="hero-art">
+          <div class="perfume-card">
+            <div class="perfume-cap"></div>
+            <div class="perfume-bottle" style="overflow: hidden; position: relative;">
+               <img id="start-perfume-img" src="" alt="Mùi hương" style="width: 100%; height: 100%; object-fit: cover; border-radius: 34px;">
+            </div>
+            <div class="sparkle s1"></div>
+            <div class="sparkle s2"></div>
+            <div class="sparkle s3"></div>
+          </div>
+          <div class="petals">
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+        <button id="start-button" class="main-button">BẮT ĐẦU</button>
+        <p class="signature">NHỮNG ĐÓA HỒNG 12D1</p>
+      </div>
+
+      <div class="quiz-page hidden" id="quiz-page">
+        <div class="top-bar">
+          <div class="progress-text" id="progress-text">Câu 1 / 10</div>
+          <div class="progress">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+        </div>
+        <div class="question-card fade-in" id="question-card">
+          <div class="question-tag">Một câu hỏi nhỏ</div>
+          <h2 class="question-title" id="question-title"></h2>
+          <div class="answers" id="answers"></div>
+        </div>
+        <footer class="footer-note">
+          <p>NHỮNG ĐÓA HỒNG 12D1</p>
+        </footer>
+      </div>
+
+      <div class="result-page hidden" id="result-page">
+        <div class="result-header">
+          <div class="badge">Kết quả của bạn</div>
+          <h2 id="result-name"></h2>
+          <p class="result-subtitle" id="result-subtitle"></p>
+        </div>
+        <div class="result-layout">
+          <div class="result-visual" id="result-visual">
+            <div class="perfume-result">
+              <div class="perfume-cap large"></div>
+              <div class="perfume-bottle large" style="overflow: hidden; position: relative;">
+                 <img id="result-perfume-img" src="" alt="Mùi hương" style="width: 100%; height: 100%; object-fit: cover; z-index: 99; border-radius: 34px;">
+              </div>
+              <div class="mist mist-1"></div>
+              <div class="mist mist-2"></div>
+              <div class="mist mist-3"></div>
+            </div>
+          </div>
+          <div class="result-content">
+            <div class="keyword-wrap" id="result-keywords"></div>
+            <div class="result-long-text" id="result-long-text"></div>
+            <div class="closing-message">
+              <p>Cảm ơn các cậu đã là 1 mảnh ghép quan trọng nơi thanh xuân của chúng tớ.</p>
+            </div>
+            <button id="go-final-button" class="main-button alt-button">ĐỌC LỜI NHẮN 💌</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="final-page hidden" id="final-page">
+        <div class="loi-nhan-cuoi">
+            <div class="perfume-card" style="margin: 0 auto 30px;">
+                <div class="perfume-cap"></div>
+                <div class="perfume-bottle" style="overflow: hidden; position: relative;">
+                    <img id="final-perfume-img" src="" alt="Kết quả" style="width: 100%; height: 100%; object-fit: cover; border-radius: 34px;">
+                </div>
+            </div>
+
+            <h2>Nói nhỏoo... 🤫</h2>
+            <p>Trước hết bọn tớ muốn gửi lời xin lỗi chân thành nhất vì sự chậm trễ không mong muốn này, và cũng cảm ơn các cậu nhiều vì đã chấp nhận cho chúng tớ thêm thời gian để có điều kiện dư dả làm nên một chương trình trọn vẹn nhấttt.</p>
+            <p>Và vì vậy, bọn tớ đã có thêm siu nhiều động lực và tình cảm để cùng nhau viết nên sự ấm áp này dành tới các cậu đó hihi 🥰</p>
+            <p>Cảm ơn các bợn gái d1 nhìu vì đã là một phần thanh xuân tuyệt đẹp của chúng tớ, cảm ơn vì chúng ta đã không bỏ cuộc, không rời xa và luôn có nhauuu 💕</p>
+            <p class="loi-chuc">Luôn mạnh khoẻ và bình an, đỗ NV1 nhíii 🍀🎓</p>
+            
+            <button id="restart-from-final" class="main-button alt-button">CHƠI LẠI TỪ ĐẦU</button>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
