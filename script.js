@@ -1,6 +1,6 @@
 // ====== DANH SÁCH ẢNH NỀN CHO 10 CÂU HỎI (Giữ nguyên thứ tự của bro) ======
 const backgroundImages = [
-  "10th.jpg", "front.jpg", "10th.jpg", "des.jpg", "quansu.jpg",
+  "10th.jpg", "front.jpg", "dark.jpg", "des.jpg", "quansu.jpg",
   "2gether1.jpg", "ky.jpg", "12.jpg", "random.jpg", "backstage.jpg",
   "2gether1.jpg", "2gether2.jpg", "rain.jpg"
 ];
